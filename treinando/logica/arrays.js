@@ -1,10 +1,11 @@
-function calcula(v,r) {
-    var i = v/r
-    return i
+var mes = ["Janeiro","Feveiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro"]
+var data = new Date
+var res = window.document.querySelector("#res")
+var botao = window.document.querySelector("#submeter")
+res.innerHTML = `Hoje é dia ${data.getDate()} de ${mes[data.getMonth()]} de ${data.getFullYear()}`
+botao.addEventListener('click',alterar)
+
+function alterar() {
+    data = new Date(document.querySelector("#ano").value, document.querySelector("#meses").value, document.querySelector("#data").value)
+    return data
 }
-
-var v = prompt("Informe qual a tensão")
-var r = prompt("Informe qual a resistência")
-
-corrente = calcula(v,r)
-document.write(`A corrente mede ${corrente}A`)
