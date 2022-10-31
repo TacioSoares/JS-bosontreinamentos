@@ -29,7 +29,7 @@
         <form method="get">
             <p>
                 <label for="data">Data: </label>
-                <input type="number" name="data" id="data">
+                <input type="number" max="31" min="1" name="data" id="data">
                 <label for="meses">Mês:</label> 
                 <select name="meses" id="meses">
                     <option value="" selected>--mês--</option>
@@ -48,10 +48,10 @@
                 </select>
             </p>    
             <p>
-                <label for="ano">Ano:</label> <input type="number" name="ano" id="ano">
+                <label for="ano">Ano:</label> <input type="number" name="ano" min="1870" max="2500" id="ano">
             </p>
             <p>
-                <input type="submit" value="Alterar data" id="submeter">
+                <input type="button" value="Alterar data" id="submeter">
             </p>
         </form>
     </section>
